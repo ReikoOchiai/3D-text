@@ -20,6 +20,10 @@ const scene = new THREE.Scene();
 // const axesHelper = new THREE.AxesHelper();
 // scene.add(axesHelper);
 
+// Ambient Light
+const ambientLight = new THREE.AmbientLight(0xfffffff, 0.5);
+scene.add(ambientLight);
+
 /**
  * Textures
  */
@@ -30,7 +34,7 @@ const matcapTexture = textureLoader.load("/textures/matcaps/8.png");
 const fontLoader = new FontLoader();
 
 fontLoader.load("/fonts/helvetiker_regular.typeface.json", (font) => {
-  const textGeometry = new TextGeometry("Reiko", {
+  const textGeometry = new TextGeometry("Reiko Ochiai", {
     font: font,
     size: 0.5,
     height: 0.2,
